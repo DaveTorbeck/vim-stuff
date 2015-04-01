@@ -13,6 +13,10 @@ filetype plugin indent on
 set number
 set shell=/bin/zsh
 set clipboard=unnamed
+set hlsearch
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
 
 "jk for escape, space for leader
 imap jk <ESC>
@@ -29,7 +33,6 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 "Easy motion settings
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
-
 
 "syntastic settings
 set statusline+=%#warningmsg#
