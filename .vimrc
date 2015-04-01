@@ -16,10 +16,20 @@ set clipboard=unnamed
 
 "jk for escape, space for leader
 imap jk <ESC>
-map <Space> \
+let mapleader = "\<Space>"
+
+"Delete and paste with blackhole register.  Leader
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+vnoremap <leader>p "_dP
 
 "Set tabs to two spaces for ruby
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+
+"Easy motion settings
+let g:EasyMotion_use_upper = 1
+let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
+
 
 "syntastic settings
 set statusline+=%#warningmsg#
