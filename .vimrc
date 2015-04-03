@@ -14,9 +14,24 @@ set number
 set shell=/bin/zsh
 set clipboard=unnamed
 set hlsearch
+set mouse=a
 
-"This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+"Easier tab navigation
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+" Alternatively use
+" "nnoremap th :tabnext<CR>
+" "nnoremap tl :tabprev<CR>
+" "nnoremap tn :tabnew<CR>
+
+"Disable markdown folding
+let g:vim_markdown_folding_disabled=1
 
 "jk for escape, space for leader
 imap jk <ESC>
